@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkigjf3ay0q37"]
+
+[ext_resource type="Texture2D" uid="uid://b2e57geelrekb" path="res://子弹.png" id="1_73gys"]
+[ext_resource type="Script" path="res://bullet_校色.gd" id="1_hu4u6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ti8m0"]
+
+[node name="Area2D" type="Area2D" groups=["子弹"]]
+script = ExtResource("1_hu4u6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ti8m0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9, -57)
+scale = Vector2(0.229041, 0.229041)
+texture = ExtResource("1_73gys")

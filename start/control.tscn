@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbybq5odmjwrk"]
+
+[ext_resource type="Script" path="res://start/CheckButton.gd" id="1_84ky7"]
+[ext_resource type="Script" path="res://start/control_场景.gd" id="1_k3o6r"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k3o6r")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.507
+anchor_right = 0.507
+offset_left = -189.064
+offset_top = 3.0
+offset_right = -97.064
+offset_bottom = 52.0
+grow_horizontal = 2
+scale = Vector2(3.981, 3)
+text = "Hello!
+It's my herd"
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.307
+anchor_top = 0.381
+anchor_right = 0.707
+anchor_bottom = 0.563
+offset_left = 0.335999
+offset_top = -5.888
+offset_right = -345.464
+offset_bottom = -92.824
+scale = Vector2(4, 4)
+text = "print me"
+script = ExtResource("1_84ky7")

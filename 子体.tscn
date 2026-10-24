@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dc2krormb8lg3"]
+
+[ext_resource type="Script" path="res://子体_角色.gd" id="1_x8bsn"]
+[ext_resource type="Texture2D" uid="uid://cv37d41lscvxp" path="res://x.png" id="2_tf7t1"]
+[ext_resource type="Script" path="res://子体_检测.gd" id="3_2j1kc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0nptb"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4tr21"]
+radius = 5.09902
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_x8bsn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0nptb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 2)
+scale = Vector2(0.0221068, 0.0210299)
+texture = ExtResource("2_tf7t1")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_2j1kc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_4tr21")

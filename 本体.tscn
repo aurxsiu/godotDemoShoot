@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdjy0qtve3hwt"]
+
+[ext_resource type="Script" path="res://本体_角色.gd" id="1_1cxri"]
+[ext_resource type="Script" path="res://本体_scence.gd" id="1_s827e"]
+[ext_resource type="Texture2D" uid="uid://cv37d41lscvxp" path="res://x.png" id="2_g72et"]
+[ext_resource type="Script" path="res://发射点.gd" id="4_b4q74"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pijaa"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_s827e")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_1cxri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_pijaa")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(5, 5)
+scale = Vector2(0.051971, 0.051971)
+texture = ExtResource("2_g72et")
+
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D"]
+script = ExtResource("4_b4q74")
